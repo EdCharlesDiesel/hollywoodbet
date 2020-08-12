@@ -6,14 +6,15 @@ import { Component } from '@angular/core'
   <div>
     <h1>Upcoming Angular Events</h1>
     <hr/>
-    <event-thumbnail [event]="event" *ngFor="let event of events"  #thumbnail (eventClicked)="handleEventClick($event)"></event-thumbnail>   
-
-    
+    <div class="row">
+    <div *ngFor="let event of events" class="col-md-5">
+      <event-thumbnail [event]="event"></event-thumbnail>
+    </div>
   </div>
   `
 })
 export class EventsListComponent {
- events = [
+  events = [
     {
       id: 1,
       name: 'Angular Connect',
@@ -317,11 +318,6 @@ export class EventsListComponent {
           voters: ['bradgreen', 'igorminar', 'johnpapa']
         }
       ]
-    } ];
-
-  handleEventClick(data: Event) {
-    console.log('Testing:', data);
-  }
-
-
+    }
+  ]
 }
