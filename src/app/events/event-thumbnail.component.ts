@@ -7,14 +7,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
       <h2>{{event.name}}</h2>
       <div>Date: {{event.date}}</div>
       <div>Time: {{event.time}}</div>
-      <div>Price: \${{event.price}}</div>
-      <div>
+      <div>Price: \${{event?.price}}</div>
+      <div *ngIf="event?.location">
         <span>Location: {{event?.location?.address}}</span>
         <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
       </div>
-
-      <button class="btn btn-primary" (click)="handleMeClick()">Click Me.</button>
-    </div>
+      <div *ngIf="event?.onlineUrl">
+        Online URL: {{event?.onlineUrl}}
+      </div>
   `,
   styles: [`
     .pad-left { margin-left: 10px; }
