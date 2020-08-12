@@ -9,8 +9,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
       <div>Time: {{event.time}}</div>
       <div>Price: \${{event.price}}</div>
       <div>
-        <span>Location: {{event.location.address}}</span>
-        <span class="pad-left">{{event.location.city}}, {{event.location.country}}</span>
+        <span>Location: {{event?.location?.address}}</span>
+        <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
       </div>
 
       <button class="btn btn-primary" (click)="handleMeClick()">Click Me.</button>
@@ -19,6 +19,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
   styles: [`
     .pad-left { margin-left: 10px; }
     .well div { color: #bbb; }
+    .thumbnail {min-height: 210px;}
   `]
 })
 export class EventThumbnailComponent {
