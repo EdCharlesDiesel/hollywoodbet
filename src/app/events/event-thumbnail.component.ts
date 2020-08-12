@@ -24,9 +24,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 export class EventThumbnailComponent {
   @Input() event: any;
   @Output() eventClicked = new EventEmitter();
+  someVariable: any = "This is fun!";
 
- 
-  handleMeClick() {      
+  handleMeClick() {
     this.eventClicked.emit('I love programming');
   }
+  logFoo(){
+    console.log('Okay');
+  }
+
 } 
