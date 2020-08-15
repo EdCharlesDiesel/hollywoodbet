@@ -1,10 +1,12 @@
 import { NavBarComponent } from './nav/nav-bar.component';
-import { EventThumbnailComponent } from './events/event-thumbnail.component';
+import { EventDetailsComponent } from './events/event-details.component';
 import { EventsListComponent } from './events/events-list.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { EventsAppComponent } from './events-app.component';
+import { TournamentComponent } from './tournament/tournament-details.component';
+
 
 @NgModule({
   imports: [
@@ -13,8 +15,10 @@ import { EventsAppComponent } from './events-app.component';
   declarations: [
     EventsAppComponent,
     EventsListComponent,
-    EventThumbnailComponent,
-    NavBarComponent
+    EventDetailsComponent,
+    NavBarComponent,
+    TournamentComponent,
+
   ],
   
   providers: [],
