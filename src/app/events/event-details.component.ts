@@ -19,14 +19,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 })
 export class EventDetailsComponent {
   @Input() event: any;
-  @Output() eventClicked = new EventEmitter();
-  someVariable: any = "This is fun!";
-
-  handleMeClick() {
-    this.eventClicked.emit('I love programming');
-  }
-  logFoo() {
-    console.log('Okay');
-  }
+ 
 
 } 

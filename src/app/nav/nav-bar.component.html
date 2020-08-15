@@ -13,10 +13,10 @@
           </a>
           <ul class="dropdown-menu">
             <li >
-              <a href="">All Tournaments</a>
+              <a [routerLink]="['tournaments']">All Tournaments</a>
             </li>
             <li >
-              <a href="">Create Tournaments</a>
+              <a [routerLink]="['/tournaments/new']" >Create Tournaments</a>
             </li>
           </ul>
         </li>
@@ -27,10 +27,10 @@
           </a>
           <ul class="dropdown-menu">
             <li >
-              <a href="">All Events</a>
+              <a [routerLink]="['/events']">All Events</a>
             </li>
             <li >
-              <a href="">Create an Event</a>
+              <a [routerLink]="['/event/new']">Create an Event</a>
             </li>
           </ul>
         </li>
